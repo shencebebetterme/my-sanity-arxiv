@@ -471,7 +471,14 @@ def title_page():
   pdf_path = request.form['titleRe']
   #os.system('open '+pdf_path) #for mac
   #os.system('xdg-open '+pdf_path) #for ubuntu
-  os.system('/mnt/c/Program\ Files/Tracker\ Software/PDF\ Viewer/PDFXCview.exe '+pdf_path) #for Win WSL
+
+  # for WSL call windows host executable
+  #os.system('/mnt/c/Program\ Files/Tracker\ Software/PDF\ Viewer/PDFXCview.exe '+pdf_path) #for Win WSL
+  #os.system('/mnt/f/green_apps/PDFXCview.exe '+pdf_path)
+
+  #for direct use in Windows
+  os.system('PDFXCview.exe '+pdf_path) #PDFXCview.exe must be in the PATH
+  #os.system('start "path/to/PDFXCview.exe" '+pdf_path) # if pdf viewer is not in the PATH
   return 'OK'
 
 
