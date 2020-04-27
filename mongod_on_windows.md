@@ -13,4 +13,5 @@ following [the official doc](https://docs.mongodb.com/manual/tutorial/install-mo
 
 4. run the service
         cd D:\myarxiv\codes
+        python serve.py
         (start "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" serve.py)
